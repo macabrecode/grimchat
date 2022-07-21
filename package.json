@@ -1,0 +1,25 @@
+{
+  "name": "macabre",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon ./grimchat/server.js",
+    "client": "nodemon ./grimchat/client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojeelafriend/macabre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojeelafriend/macabre/issues"
+  },
+  "homepage": "https://github.com/ojeelafriend/macabre#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
