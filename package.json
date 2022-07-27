@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon ./grimchat/server.js",
-    "client": "nodemon ./grimchat/client.js"
+    "server": "nodemon ./server.js",
+    "client": "nodemon ./client.js"
   },
   "repository": {
     "type": "git",
