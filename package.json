@@ -1,8 +1,8 @@
 {
-  "name": "macabre",
+  "name": "grimchat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "none",
   "scripts": {
     "server": "nodemon ./server.js",
     "client": "nodemon ./client.js"
