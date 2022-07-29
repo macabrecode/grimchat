@@ -2,10 +2,10 @@
   "name": "macabre",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "server": "nodemon ./server.js",
-    "client": "nodemon ./client.js"
+    "server": "nodemon ./src/server.js",
+    "client": "nodemon ./src/client.js"
   },
   "repository": {
     "type": "git",
