@@ -28,4 +28,6 @@ Now it's time to run the client, choose a username and run the command:
 or  
 `node src/client --username "My username" --address <the server ip address>`
 
+![](https://media.giphy.com/media/gMBcXVz1wcVht0K2Ia/giphy.gif)
+
 Try running the client on another machine (connected to the local network) putting the same ip address and another username. Now you can chat between two different machines.
