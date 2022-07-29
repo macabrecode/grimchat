@@ -36,4 +36,6 @@ server.on('connection', (socket) => {
   listSocket.push(append(socket));
 });
 
-server.listen(3030, address);
+server.listen(3030, address, () => {
+  console.log(`Server is ready for connections: ${address}`);
+});
