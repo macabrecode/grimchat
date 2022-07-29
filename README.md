@@ -1,6 +1,6 @@
 # :busts_in_silhouette: grimchat
 
-![](https://img.shields.io/badge/grimchat-developing-yellow) ![](https://img.shields.io/badge/npm-8.13.2-green) ![](https://img.shields.io/badge/node-v17.6.0-green) ![](https://img.shields.io/badge/macabresoft-purple)
+![](https://img.shields.io/badge/grimchat-developing-yellow) ![](https://img.shields.io/badge/npm-8.13.2-green) ![](https://img.shields.io/badge/node-v17.6.0-green) ![](https://img.shields.io/badge/macabrecode-purple)
 
 Chat via terminal con el propósito de mejorar la productividad a la hora de comunicarse con otros compañer@s. 
 
