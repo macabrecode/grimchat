@@ -1,6 +1,6 @@
 # :busts_in_silhouette: grimchat
 
-![](https://img.shields.io/badge/grimchat-developing-yellow) ![](https://img.shields.io/badge/npm-8.13.2-green) ![](https://img.shields.io/badge/node-v17.6.0-green) ![](https://img.shields.io/badge/macabrecode-purple)
+![](https://img.shields.io/badge/grimchat-v1.0-blue) ![](https://img.shields.io/badge/npm-8.13.2-green) ![](https://img.shields.io/badge/node-v17.6.0-green) ![](https://img.shields.io/badge/macabrecode-purple)
 
 CLI chat through tcp sockets. With the purpose of improving productivity when talking to friends.
 
