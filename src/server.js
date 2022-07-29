@@ -17,9 +17,7 @@ const server = net.createServer((socket) => {
   socket.on('data', (message) => {
     console.log(message.toString());
 
-    listSocket
-      .filter((pipe) => pipe.credentials !== socket.remoteAddress)
-      .map((client) => client.command.write(message));
+    listSocket.map((client) => client.command.write(message));
   });
 
   socket.on('close', () => {
