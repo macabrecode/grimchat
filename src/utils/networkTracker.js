@@ -1,3 +1,9 @@
-const { networkInterfaces } = require('os');
+const { networkInterfaces } = require("os");
 
-module.exports = networkInterfaces()['Wi-Fi'][1].address;
+switch (process.platform) {
+  case "linux":
+    module.exports = networkInterfaces()["wlo1"][0].address;
+    break;
+  default:
+    module.exports = networkInterfaces()["Wi-Fi"][1].address;
+}
