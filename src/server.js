@@ -1,23 +1,22 @@
-/*   Server funciona como el nombre lo dice, hace de servidor
- **  a la espera de conexiones en el puerto 3030 con la address
+require('dotenv').config();
+const net = require('net');
+
+const address = require('./utils/networkTracker');
+const { append } = require('./utils/grim-append');
+
+/*   Hace de servidor a la espera de conexiones en el puerto 3030 con la address
  **  de turno, preestablecida por la computadora que contenga
  **  el servidor.
  */
-
-require('dotenv').config();
-
-const net = require('net');
-
-const { append } = require('./utils/grim-append');
 
 let listSocket = []; //Collection sockets.
 
 const server = net.createServer((socket) => {
   socket.write('Welcome to grimchat ;)');
 
-  //Encargado de enviar y filtrar los mensajes a los demás clientes.
   socket.on('data', (message) => {
     console.log(message.toString());
+
     listSocket
       .filter((pipe) => pipe.credentials !== socket.remoteAddress)
       .map((client) => client.command.write(message));
@@ -33,7 +32,8 @@ const server = net.createServer((socket) => {
 });
 
 server.on('connection', (socket) => {
+  //al conectarse, se guarda el socket en concreto que genera con el client
   listSocket.push(append(socket));
 });
 
-server.listen(3030, process.env.ADDRESS);
+server.listen(3030, address);
