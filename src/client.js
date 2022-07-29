@@ -1,13 +1,11 @@
 const username = process.argv[2];
 
-// SERVERLINE
-// const prompt = require('serverline');
-// prompt.init({ prompt: `${username}: ` });
+const { input } = require("./utils/prompt");
 
 if (username) {
-  require('dotenv').config();
+  require("dotenv").config();
 
-  const net = require('net');
+  const net = require("net");
 
   const client = new net.Socket();
 
@@ -15,26 +13,19 @@ if (username) {
     client.write(`Hello, server! I'm ${username}`);
   });
 
-  client.on('data', (data) => {
+  client.on("data", (data) => {
     console.log(data.toString());
   });
 
-  process.stdin.on('data', (message) => {
-    client.write(message.toString());
+  input(username, client);
+
+  client.on("close", () => {
+    console.log("Connection closed.");
   });
 
-  // SERVERLINE
-  // prompt.on('line', (message) => {
-  //   client.write(`${username}: ${message}`);
-  // });
-
-  client.on('close', () => {
-    console.log('Connection closed.');
-  });
-
-  client.on('error', (error) => {
+  client.on("error", (error) => {
     console.log(`There was an error: ${error}`);
   });
 } else {
-  console.log('Please enter a username: `npm run client <username>`');
+  console.log("Please enter a username: `npm run client <username>`");
 }
